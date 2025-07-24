@@ -1,0 +1,214 @@
+/* ===== SIMPLIFIED FOOTER STYLES ===== */
+/* Beautiful minimal footer with copyright information */
+
+/* Ensure body and html take full height */
+html, body {
+  min-height: 100vh;
+}
+
+/* Make body a flex container to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main content area flex to fill remaining space */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide footer when hero section is visible (homepage) */
+.footer {
+  display: none; /* Hidden by default */
+}
+
+/* Show footer only when games are visible */
+body.games-visible .footer {
+  display: block;
+}
+
+.footer {
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.95) 0%, 
+    rgba(118, 75, 162, 0.95) 50%, 
+    rgba(240, 147, 251, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #ffffff;
+  padding: 2rem 0;
+  margin-top: auto; /* This pushes footer to bottom */
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hearts" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" text-anchor="middle" fill="rgba(255,255,255,0.05)" font-size="12">💕</text></pattern></defs><rect width="100" height="100" fill="url(%23hearts)"/></svg>');
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.copyright {
+  flex: 1;
+  max-width: 800px;
+}
+
+.copyright p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.sub-copyright {
+  font-size: 0.9rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-style: italic;
+  font-weight: 400 !important;
+  margin-bottom: 0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Add subtle animation to hearts in copyright text */
+.copyright p:first-child {
+  position: relative;
+}
+
+.copyright p:first-child::after {
+  content: '💖';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  animation: heartPulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom {
+    padding: 0 1rem;
+  }
+
+  .copyright p {
+    font-size: 0.9rem;
+  }
+
+  .sub-copyright {
+    font-size: 0.8rem !important;
+  }
+
+  .copyright p:first-child::after {
+    right: -25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer-bottom {
+    padding: 0 0.5rem;
+  }
+
+  .copyright p {
+    font-size: 0.85rem;
+  }
+
+  .sub-copyright {
+    font-size: 0.75rem !important;
+  }
+
+  .copyright p:first-child::after {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Hover effect for entire footer */
+.footer:hover::before {
+  opacity: 0.8;
+  animation: backgroundShimmer 3s ease-in-out infinite;
+}
+
+.footer:hover .copyright p:first-child::after {
+  animation: heartPulse 1s ease-in-out infinite;
+}
+
+@keyframes backgroundShimmer {
+  0%, 100% {
+    transform: translateX(-100%);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 0.1;
+  }
+}
+
+/* Add a subtle glow effect on hover */
+.footer:hover {
+  box-shadow: 
+    0 -10px 30px rgba(102, 126, 234, 0.2),
+    0 -5px 15px rgba(118, 75, 162, 0.15);
+}
+
+/* Smooth transition for all hover effects */
+.footer {
+  transition: all 0.3s ease;
+}
+
+.copyright p {
+  transition: all 0.3s ease;
+}
+
+.footer:hover .copyright p {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}

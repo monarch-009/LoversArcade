@@ -1,0 +1,338 @@
+/* ===== GAME CARDS ===== */
+/* Game card styles and themed variations */
+
+.game-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.game-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.card-corner-accent {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.game-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.game-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  z-index: 2;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.game-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  z-index: 2;
+  position: relative;
+  font-weight: 400;
+}
+
+/* Add subtle animations */
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.game-card:hover::before {
+  opacity: 1;
+}
+
+/* Add decorative elements */
+.game-card::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+}
+
+/* ===== THEMED CARD STYLES ===== */
+
+/* Emotional Intimacy */
+.emotional-intimacy-card {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f093fb 100%);
+  color: white;
+}
+
+.emotional-intimacy-card .card-background-gradient {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f093fb 100%);
+}
+
+.emotional-intimacy-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.emotional-intimacy-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 107, 157, 0.3);
+}
+
+/* Sexual Intimacy */
+.sexual-intimacy-card {
+  background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+  color: white;
+}
+
+.sexual-intimacy-card .card-background-gradient {
+  background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+}
+
+.sexual-intimacy-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sexual-intimacy-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 71, 87, 0.3);
+}
+
+/* After Dark */
+.after-dark-card {
+  background: linear-gradient(135deg, #2c2c54 0%, #40407a 100%);
+  color: white;
+}
+
+.after-dark-card .card-background-gradient {
+  background: linear-gradient(135deg, #2c2c54 0%, #40407a 100%);
+}
+
+.after-dark-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.after-dark-card:hover {
+  box-shadow: 0 20px 40px rgba(44, 44, 84, 0.4);
+}
+
+/* Affection & Romance */
+.affection-romance-card {
+  background: linear-gradient(135deg, #fda085 0%, #f093fb 100%);
+  color: white;
+}
+
+.affection-romance-card .card-background-gradient {
+  background: linear-gradient(135deg, #fda085 0%, #f093fb 100%);
+}
+
+.affection-romance-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.affection-romance-card:hover {
+  box-shadow: 0 20px 40px rgba(253, 160, 133, 0.3);
+}
+
+/* Communication & Trust */
+.communication-trust-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.communication-trust-card .card-background-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.communication-trust-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.communication-trust-card:hover {
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+/* Relationship Goals */
+.relationship-goals-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.relationship-goals-card .card-background-gradient {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.relationship-goals-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.relationship-goals-card:hover {
+  box-shadow: 0 20px 40px rgba(240, 147, 251, 0.3);
+}
+
+/* Flirty Dares */
+.flirty-dares-card {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+}
+
+.flirty-dares-card .card-background-gradient {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.flirty-dares-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.flirty-dares-card:hover {
+  box-shadow: 0 20px 40px rgba(78, 205, 196, 0.3);
+}
+
+/* Fun & Silly */
+.fun-silly-card {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+}
+
+.fun-silly-card .card-background-gradient {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.fun-silly-card .card-corner-accent {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.fun-silly-card .game-title {
+  color: #333;
+}
+
+.fun-silly-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 236, 210, 0.4);
+}
+
+/* Sexual Positions */
+.sexual-positions-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.sexual-positions-card .card-background-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.sexual-positions-card .card-corner-accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sexual-positions-card:hover {
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+/* ===== FUN ROMANTIC GAMES THEMED CARDS ===== */
+
+/* Truth or Dare */
+.truth-dare-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+}
+
+.truth-dare-card .card-background-gradient {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.truth-dare-card .card-corner-accent {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.truth-dare-card .game-title {
+  color: #333;
+}
+
+.truth-dare-card:hover {
+  box-shadow: 0 20px 40px rgba(168, 237, 234, 0.4);
+}
+
+/* Who Knows Me Better */
+.who-knows-card {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+}
+
+.who-knows-card .card-background-gradient {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.who-knows-card .card-corner-accent {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.who-knows-card .game-title {
+  color: #333;
+}
+
+.who-knows-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 236, 210, 0.4);
+}
+
+/* Never Have I Ever */
+.never-have-card {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  color: #333;
+}
+
+.never-have-card .card-background-gradient {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+}
+
+.never-have-card .card-corner-accent {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.never-have-card .game-title {
+  color: #333;
+}
+
+.never-have-card:hover {
+  box-shadow: 0 20px 40px rgba(210, 153, 194, 0.4);
+}

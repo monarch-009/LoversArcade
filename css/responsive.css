@@ -1,0 +1,544 @@
+/* ===== RESPONSIVE STYLES ===== */
+/* Media queries and responsive design adjustments */
+
+/* Tablet and medium screens */
+@media (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .truth-dare-buttons {
+    gap: 1.5rem;
+  }
+  
+  .enhanced-btn {
+    min-width: 180px;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+/* Mobile and small screens */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  .game-card {
+    min-height: 160px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .game-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .game-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .game-description {
+    font-size: 0.9rem;
+  }
+
+  /* Truth or Dare responsive */
+  .truth-dare-container {
+    padding: 1rem 0;
+  }
+
+  .truth-dare-title {
+    font-size: 2rem;
+  }
+
+  .truth-dare-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .enhanced-btn {
+    min-width: 250px;
+    max-width: 100%;
+  }
+
+  .btn-icon {
+    font-size: 1.8rem;
+  }
+
+  .btn-title {
+    font-size: 1.2rem;
+  }
+
+  .btn-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .truth-dare-card {
+    margin: 1rem 0;
+  }
+
+  .card-header {
+    padding: 1rem 1.5rem 0.8rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .card-actions {
+    padding: 0.8rem 1.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .truth-dare-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* Quiz responsive */
+  .quiz-category-btn {
+    margin: 0.3rem;
+    padding: 1rem;
+  }
+
+  .quiz-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Card game responsive */
+  .card-modal-container {
+    max-width: 95vw;
+    margin: 0.5rem;
+  }
+
+  .modern-card-wrapper {
+    padding: 0 10px;
+  }
+
+  .modern-card {
+    max-width: 100%;
+    height: 280px;
+  }
+
+  .card-inner-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .card-text-area {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .card-number-badge {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .card-favorite-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+
+  .card-nav-buttons {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    min-width: 70px;
+  }
+
+  .card-extra-functions {
+    gap: 0.6rem;
+  }
+
+  .extra-btn {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .modern-card-controls {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Header responsive */
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  /* Hero responsive */
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .couple-avatars {
+    font-size: 4rem;
+  }
+
+  .start-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Section responsive */
+  .section-title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .game-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Modal responsive */
+  .modal-content {
+    margin: 1rem;
+    padding: 1.5rem;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Music toggle responsive */
+  .music-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .game-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .game-card {
+    padding: 1rem;
+    min-height: 140px;
+  }
+
+  .game-icon {
+    font-size: 1.8rem;
+  }
+
+  .game-title {
+    font-size: 1.1rem;
+  }
+
+  .game-description {
+    font-size: 0.85rem;
+  }
+
+  /* Truth or Dare small mobile */
+  .truth-dare-title {
+    font-size: 1.8rem;
+  }
+
+  .enhanced-btn {
+    min-width: 200px;
+    padding: 1rem 1.2rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  /* Card game small mobile */
+  .modern-card {
+    height: 250px;
+  }
+
+  .card-inner-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .card-text-area {
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .card-number-badge {
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .card-favorite-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .nav-btn {
+    padding: 5px 10px;
+    font-size: 0.65rem;
+    min-width: 60px;
+  }
+
+  .extra-btn {
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+
+  /* Modal small mobile */
+  .modal-content {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Large screens and desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .truth-dare-buttons {
+    gap: 2rem;
+  }
+
+  .enhanced-btn {
+    min-width: 220px;
+  }
+
+  .modern-card {
+    max-width: 380px;
+    height: 320px;
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .couple-avatars {
+    font-size: 3.5rem;
+  }
+
+  .modern-card {
+    height: 260px;
+  }
+
+  .card-inner-content {
+    padding: 1.8rem 1.3rem;
+  }
+
+  .card-text-area {
+    padding: 1.8rem 1.3rem;
+    margin: 1.2rem 0;
+  }
+
+  .truth-dare-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .enhanced-btn {
+    min-width: 180px;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .modern-card {
+    max-width: 420px;
+    height: 360px;
+  }
+
+  .card-inner-content {
+    padding: 3rem 2.5rem;
+  }
+
+  .card-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1800px) {
+  .games-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Hover states for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .game-card:hover {
+    transform: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .modern-card:hover {
+    transform: none;
+  }
+
+  .nav-btn:hover {
+    transform: none;
+  }
+
+  .enhanced-btn:hover {
+    transform: none;
+  }
+
+  .card-favorite-btn:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .modern-card {
+    animation: none;
+  }
+
+  .card-flip {
+    animation: none;
+  }
+
+  .sparkle {
+    animation: none;
+  }
+
+  .couple-avatars {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .game-card {
+    border: 2px solid #000;
+  }
+
+  .modern-card {
+    border: 3px solid #000;
+  }
+
+  .nav-btn {
+    border: 2px solid #000;
+  }
+
+  .card-text {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .music-toggle,
+  .card-nav-buttons,
+  .card-extra-functions,
+  .nav-btn,
+  .extra-btn {
+    display: none !important;
+  }
+
+  .modern-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .card-text {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}

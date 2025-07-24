@@ -1,0 +1,251 @@
+/* ===== TRUTH OR DARE STYLES ===== */
+/* Enhanced Truth or Dare game specific styles */
+
+.truth-dare-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.truth-dare-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.truth-dare-title {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #ff6b9d, #c44569, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.sparkle {
+  display: inline-block;
+  animation: sparkleRotate 2s ease-in-out infinite;
+}
+
+.truth-dare-subtitle {
+  color: #8b5a83;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.truth-dare-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.enhanced-btn {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.enhanced-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.truth-button {
+  background: linear-gradient(135deg, #ddd6fe, #e0e7ff);
+  border-image: linear-gradient(135deg, #6366f1, #8b5cf6) 1;
+}
+
+.truth-button:hover {
+  background: linear-gradient(135deg, #c4b5fd, #ddd6fe);
+}
+
+.dare-button {
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+  border-image: linear-gradient(135deg, #f59e0b, #f97316) 1;
+}
+
+.dare-button:hover {
+  background: linear-gradient(135deg, #fde68a, #fef3c7);
+}
+
+.btn-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+.btn-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  opacity: 0.8;
+}
+
+.btn-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  border-radius: 22px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.enhanced-btn:hover .btn-glow {
+  opacity: 1;
+}
+
+.truth-dare-result-container {
+  margin: 2rem 0;
+  min-height: 200px;
+}
+
+.truth-dare-card {
+  background: linear-gradient(135deg, #ffffff, #fafbff);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.truth-card {
+  border-left: 5px solid #6366f1;
+}
+
+.dare-card {
+  border-left: 5px solid #f59e0b;
+}
+
+.card-header {
+  padding: 1.5rem 2rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+.card-title {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #374151;
+  margin: 0;
+}
+
+.card-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.truth-badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.dare-badge {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: white;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+  text-align: center;
+}
+
+.card-actions {
+  padding: 1rem 2rem 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-timer {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #f59e0b);
+  width: 0%;
+  transition: width 30s linear;
+}
+
+.truth-dare-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
